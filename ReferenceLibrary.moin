@@ -1,6 +1,6 @@
-At the moment this page serves as a brainstorming sandbox for a [[../|OpenRaster]] reference implementation (from now on referred to as ''libora''). Following [[http://www.libpng.org/|libpng]] as an example it should be written in standard C for easy portability, have a low dependency count and a low memory consumption.
+''This page has archived [[/Discussion|discussion threads]].''
 
-''Please write discussion and questions on the [[/Discussion|discussion page]].''
+At the moment this page serves as a brainstorming sandbox for a [[../|OpenRaster]] reference implementation (from now on referred to as ''libora''). Following [[http://www.libpng.org/|libpng]] as an example it should be written in standard C for easy portability, have a low dependency count and a low memory consumption.
 
 == Dependencies ==
 
