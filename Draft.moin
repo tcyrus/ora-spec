@@ -21,15 +21,15 @@ For this intent is for archival and does not allow any application specific exte
 
  * Still under discussion.
 
-== OpenRaster Extentions / Modules ==
+== OpenRaster Extensions / Modules ==
 
 This describes Optional features like SVG layers, including text layers, that are not part of baseline.
 
  * [[/EffectsSpecification|Effects Specification]]
 
-== Proposals and Application Specific Extentions ==
+== Proposals and Application Specific Extensions ==
 
-Those might move to the Extensions after discussion. Application developers are invited to create a wiki entry here and develop it. At some point it might be proposed for inclusion to the Extentions through the Create mailing list.
+Those might move to the Extensions after discussion. Application developers are invited to create a wiki entry here and develop it. At some point it might be proposed for inclusion to the Extensions through the Create mailing list.
 
  * [[/Palette|Palette]]
  * [[/EmbedFonts|Embed Fonts]] (Proposal to extension)
