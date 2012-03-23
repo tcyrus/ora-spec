@@ -1,0 +1,39 @@
+##language: en
+
+(Salvaged from the old CREATE mediawiki instance. I'm calling it a Draft and reserving that namespace for it here because even though the Baseline part is fairly formal and usable, some of the extensions read more like requirements gathering exercises. Quite a mix, and it'll need sorting out before we can move forward -- achadwick)
+
+== OpenRaster Baseline Intent ==
+
+Every [[../|OpenRaster]] file is compliant to Baseline.
+
+This intent is for exchange between applications and it is allowed to have custom extensions in such a file.
+
+ * [[/FileLayout|File Layout Specification]] 
+ * [[/LayersStack|Layer Stack Specification]]
+
+== OpenRaster Archival Intent ==
+
+For this intent is for archival and does not allow any application specific extensions. It places additional restrictions on the Baseline Intent.
+
+ * Still under discussion.
+
+== OpenRaster Extentions / Modules ==
+
+This describes Optional features like SVG layers, including text layers, that are not part of baseline.
+
+ * [[OpenRaster/Effects_Specification|Effects Specification]]
+
+== Proposals and Application Specific Extentions ==
+
+Those might move to the Extensions after discussion. Application developers are invited to create a wiki entry here and develop it. At some point it might be proposed for inclusion to the Extentions through the Create mailing list.
+
+ * [[/Palette|Palette]]
+ * [[/Embed Fonts|Embed Fonts]] (Proposal to extension)
+ * [[/Multiple pages|Multiple pages]]
+ * [[/Animation|Animation]] support using multiple pages and a timer like PSD do
+ * [[/Undo-history|Undo-history]] support undo/history of commands/actions like PSD do
+
+== Related Links ==
+ * [[http://gitorious.org/openraster/openraster-example-files/trees/master|Sample OpenRaster files]] for testing
+ * [[../DesktopIntegration]] for the mime entry, and a list of programs using the thumbnails
+ * [[http://jens.triq.net/thumbnail-spec/index.html|Thumbnail Managing Standard]]
