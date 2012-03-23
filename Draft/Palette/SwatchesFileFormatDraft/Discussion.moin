@@ -1,0 +1,18 @@
+I'd name the CIE*XYZ channels as usual upper case:
+
+{{{
+ XYZ = element XYZ {
+  spaceAttribute,
+  attribute X { xsd:float },
+  attribute Y { xsd:float },
+  attribute Z { xsd:float }
+ }
+}}}
+
+For all other colour spaces I'd use the colour space name for the channels too: HLS with H,L and S channels respectively.
+
+A range indication might be useful for some colour spaces. For instance CGATS files, the non XML ascii style colour file format, uses ranges of 0...100 for some and different ranges for other colour spaces. This would be nice to indicate right from the beginning. The range could be defined as a media relative thing, as all colours are not (yet) HDR. Of course real live colours can exceed these ranges, which is not yet supported by this draft(?).
+
+A reference to a PCS colour space would make a ICC profile a optional thing. Still the ICC profile will be useful to handle native channels like Cmyk.
+
+--!KaiUweBehrmann 07:11, 24 June 2008 (UTC)
