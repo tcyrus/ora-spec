@@ -1,5 +1,9 @@
 ##language: en
 
+''This page is part of the [[../|OpenRaster file format description]].''
+
+--------------
+
 Please add your application here when you implement [[../|OpenRaster]] support. 
 
 == Editing applications ==
