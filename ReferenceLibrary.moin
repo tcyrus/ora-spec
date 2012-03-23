@@ -1,4 +1,8 @@
-''This page has archived [[/Discussion|discussion threads]].''
+##language: en
+
+''This page is part of the [[../|OpenRaster file format description]]. It has archived [[/Discussion|discussion threads]].''
+
+---------------------------
 
 At the moment this page serves as a brainstorming sandbox for a [[../|OpenRaster]] reference implementation (from now on referred to as ''libora''). Following [[http://www.libpng.org/|libpng]] as an example it should be written in standard C for easy portability, have a low dependency count and a low memory consumption.
 
