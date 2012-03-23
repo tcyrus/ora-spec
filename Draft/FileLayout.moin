@@ -1,0 +1,42 @@
+##language: en
+
+:''Status: what is already specified is pretty much final''
+
+== Storage ==
+
+[[../|OpenRaster]] files have the file name extension '''.ora'''. The data is stored as [[http://www.pkware.com/documents/casestudies/APPNOTE.TXT|ZIP file]].
+
+Note that ZIP can use a different compression algorithm on a per-file basis. Only DEFLATED and STORED should be used. Filenames are case-sensitive and must be UTF-8 encoded.
+
+  ''If you decide to write non-ascii filenames, be aware that ZIP has an UTF-8 flag for each filename. Make sure this flag is set, otherwise the content might get decoded as cp437. And ZIP has a 64bit extension that you need to enable to write files larger than 4GB.'' --Maxy 15:05, 22 January 2011 (UTC)
+
+== Required Files ==
+
+=== mimetype ===
+
+The first file in this ZIP must be called "mimetype" without extension and must be STORED without compression.
+This file contains the string "image/openraster" without newline.
+
+=== stack.xml ===
+
+This is the UTF-8 encoded XML file from the [[../LayersStack|Layers Stack Specification]].
+
+=== data ===
+
+This directory is (by convention) where data files are usually stored.
+Files must be referenced by their full path, eg. "data/layer2.png" inside stack.xml.
+
+All files inside this directory should be referenced from somewhere. Well known filename extensions (like .png) should be lowercase.
+
+=== Thumbnails/thumbnail.png ===
+
+An openraster file ''must'' have a thumbnail.png, in order to get previews in file browsers. It ''must'' be a non-interlaced PNG with 8bits per channel of at most 256x256 pixels.
+It ''should'' be as big as possible without upscaling or changing the aspect ratio. Any aspect ratio is permitted. It ''should not'' contain any frame or decoration.
+
+The thumbnail file must not be referenced in any .xml file.
+
+== Optional Files ==
+
+=== mergedimage.png ===
+
+It openraster file ''may'' contain the final rendered image without any frame or decoration. This file ''must.. be a PNG file with 8 or 16 bits per channel. The mergedimage.png file is obligatory in the Archival Intent.
