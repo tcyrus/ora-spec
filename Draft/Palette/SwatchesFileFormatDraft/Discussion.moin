@@ -1,3 +1,8 @@
+''This is an archived discussion page from the defunct [[http://wayback.archive.org/web/*/http://create.freedesktop.org/|CREATE wiki]], and is not watched by the original authors. For further discussion of the [[../|parent page]] or any other part of the [[Specifications/OpenRaster|OpenRaster specification]], please use the [[http://lists.freedesktop.org/mailman/listinfo/create|mailing list]] instead.''
+
+
+== Channel letter case ==
+
 I'd name the CIE*XYZ channels as usual upper case:
 
 {{{
