@@ -1,0 +1,46 @@
+##language:en
+
+(The following is historical information salvaged from the old wiki. It preserves the final text from the Requirements and Challenges sections as of 22 January 2011.) 
+
+= OpenRaster Requirements =
+
+Following features should be present:
+
+== General ==
+
+ * full freely available documentation
+ * !OpenDocument type of file format (archive with multiple files inside)
+ * extensible, but private undocumented extensions should be excluded, any extension should be added to the spec and documentation of the file format
+ * applications aren't expected to support all features of the file format, but when manipulating the file they shouldn't lose any information they can't handle
+
+=== Metadata ===
+
+ * storage of metadata using {XMP - Dublin Core - IPTC} tags
+ * possibility to store metadata tags per layer
+ * storage of EXIF tags
+ * all text data in Unicode (UTF-8 or UTF-16)
+
+=== Layers ===
+
+ * storage of multiple layers
+ * storage of each layer's coordinates
+ * storage of blending (compositing) options for each layer
+ * storage of adjustment layers
+ * storage of layer effects
+ * groups of layers
+ * color information - profile, colorspace
+
+=== Other ===
+
+ * storage of paths, clipping paths, text on path
+ * selections, masks
+ * embedding documents within !OpenDocument framework
+ * support undo/history of commands/actions like PSD do
+
+== Challenges ==
+
+A major problem is that because all features aren't available in all the programs, image won't be displayed the same way in different applications, especially for adjustement/filters layers. And "viewer" apps like inkscape or scribus won't have any implementation at all of those features
+
+A likely work-around is the optional storage of a redundant extra layer containing the fully rendered pixel data as seen after all image processing, or possibly a lower-resolution snapshot of it suitable for previewing and thumbnailing.
+
+Different implementations levels might be defined, like, tiny, simple, small, normal, full and custom.
