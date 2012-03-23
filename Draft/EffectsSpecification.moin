@@ -1,0 +1,42 @@
+##language: en
+
+Note: this is an early draft of the specification, do not take anything on this page for granted, pretty much everything is open for discution.
+
+= Introduction =
+
+This document specifies and describes the list of available filters in the !OpenRaster Effects. The main two goals of the specification is interoperability between applications and saving non destructrive pixels operations.
+
+This document address the mathematics behind filters, and the list of legal parameters. Note, that !OpenRaster files may use filters not describe in this document, in which case the file won't be valid for interoperability, unless the result of the operation is also available.
+
+SVG 1.1 allready defines a list of filters which will be used as a basis for this document.
+
+= Standard Filters =
+
+== ColorMatrix ==
+
+See [[http://www.w3.org/TR/SVG11/filters.html#feColorMatrix|SVG 1.1 Specification]].
+
+== ConvolveMatrix ==
+
+See [[http://www.w3.org/TR/SVG11/filters.html#feConvolveMatrix|SVG 1.1 Specification]].
+
+== ComponentTransfer ==
+
+See [[http://www.w3.org/TR/SVG11/filters.html#feComponentTransfer|SVG 1.1 Specification]].
+
+== GaussianBlur ==
+
+See [[http://www.w3.org/TR/SVG11/filters.html#feGaussianBlur|SVG 1.1 Specification]].
+
+== Tile ==
+
+See [[http://www.w3.org/TR/SVG11/filters.html#feTile|SVG 1.1 Specification]].
+
+== Morphology ==
+
+See [[http://www.w3.org/TR/SVG11/filters.html#feMorphology|SVG 1.1 Specification]].
+
+== Distortion correction ==
+
+
+== Burn and Dodge ==
