@@ -1,6 +1,10 @@
 ##language: en
 
-(Salvaged from the old CREATE mediawiki instance. I'm calling it a Draft and reserving that namespace for it here because even though the Baseline part is fairly formal and usable, some of the extensions read more like requirements gathering exercises. Quite a mix, and it'll need sorting out before we can move forward -- achadwick)
+''This page is part of the [[../|OpenRaster file format description]].''
+
+----------------------------
+
+= Draft OpenRaster Specification =
 
 == OpenRaster Baseline Intent ==
 
