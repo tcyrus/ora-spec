@@ -21,17 +21,17 @@ For this intent is for archival and does not allow any application specific exte
 
 This describes Optional features like SVG layers, including text layers, that are not part of baseline.
 
- * [[OpenRaster/Effects_Specification|Effects Specification]]
+ * [[/EffectsSpecification|Effects Specification]]
 
 == Proposals and Application Specific Extentions ==
 
 Those might move to the Extensions after discussion. Application developers are invited to create a wiki entry here and develop it. At some point it might be proposed for inclusion to the Extentions through the Create mailing list.
 
  * [[/Palette|Palette]]
- * [[/Embed Fonts|Embed Fonts]] (Proposal to extension)
- * [[/Multiple pages|Multiple pages]]
+ * [[/EmbedFonts|Embed Fonts]] (Proposal to extension)
+ * [[/MultiplePages|Multiple pages]]
  * [[/Animation|Animation]] support using multiple pages and a timer like PSD do
- * [[/Undo-history|Undo-history]] support undo/history of commands/actions like PSD do
+ * [[/UndoHistory|Undo-history]] support undo/history of commands/actions like PSD do
 
 == Related Links ==
  * [[http://gitorious.org/openraster/openraster-example-files/trees/master|Sample OpenRaster files]] for testing
