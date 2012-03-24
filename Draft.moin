@@ -37,6 +37,7 @@ Those might move to the Extensions after discussion. Application developers are 
  * [[/Animation|Animation]] support using multiple pages and a timer like PSD do
  * [[/UndoHistory|Undo-history]] support undo/history of commands/actions like PSD do
  * [[/LayerSelectionStatus|Layer Selection Status]] - load and save layer selection state
+ * [[/LayerEditLockingStatus|Layer Edit Locking Status]] - load & save layer immutability state
 
 == Related Links ==
  * [[http://gitorious.org/openraster/openraster-example-files/trees/master|Sample OpenRaster files]] for testing
