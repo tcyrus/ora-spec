@@ -11,7 +11,7 @@ Please add your application here when you implement [[../|OpenRaster]] support.
 || '''Application'''  || '''Basic support''' || '''Default file format''' ||
 || [[http://www.mypaint.info|MyPaint]] || Since 0.6 (January 2009) || Yes ||
 || [[http://sourceforge.net/projects/drawpile/|DrawPile]] || In development version (June 2009), will be in 0.7 || Unknown ||
-|| [[http://krita.org/ Krita]] || Since 2.0 (May 2009) || No ||
+|| [[http://krita.org/|Krita]] || Since 2.0 (May 2009) || No ||
 || [[http://www.gimp.org/|GIMP]] ||In development version (January 2010), will be in 2.8 Plug-in for 2.6 [[http://registry.gimp.org/node/18435|available]] || No ||
 || [[http://pinta-project.com/|Pinta]] || Since 0.4 (July 2010) || Unknown ||
 || [[http://www.nathive.org/|Native]] || Since 0.908 (June 2010) || Yes ||
