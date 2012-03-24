@@ -11,7 +11,7 @@ Bug: https://bugs.freedesktop.org/show_bug.cgi?id=37713
 
 Editor applications normally have a concept of which layer or layers, are currently selected by the user for editing. It is more convenient for the user if such applications save this information to !OpenRaster files, and are able to select the same layer or layers again when the file is reloaded. Therefore, the {{{<layer/>}}} element in a layer stack definition should support the following extra attribute:
 
- * "{{{selected}}}": the layer selection status; a [[http://www.w3.org/TR/html5/common-microsyntaxes.html#boolean-attributes|boolean attribute]]. The only possible value is the string "{{{selected}}}", meaning that the layer is selected by the user, and may be made active for editing after loading.
+ * "{{{selected}}}": the layer selection status; a [[http://www.w3.org/TR/html5/common-microsyntaxes.html#boolean-attributes|boolean attribute]]. The only possible value is the string "{{{selected}}}", meaning that the layer is selected by the user, and may be made active for editing after loading. Absence of this attribute indicates that the layer is not selected: this is also the default layer selection status.
 
 === Example ===
 
