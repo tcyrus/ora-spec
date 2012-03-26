@@ -4,7 +4,7 @@
 
 ---------------------
 
-State: Proposal<<BR>>
+State: Implemented ([[https://gitorious.org/openraster/openraster-standard/merge_requests/1|awaiting schema merge]])<<BR>>
 Bug: https://bugs.freedesktop.org/show_bug.cgi?id=37713
 
 == Layer Selection Status ==
@@ -29,3 +29,7 @@ This change has no impact on the viewing baseline intent.
 Apps supporting the full baseline intent which permit layers to be chosen by the user for editing or any other purpose should mark a single such chosen layer as {{{selected}}} when saving, ideally a layer currently receptive to editing. Upon loading, apps should respect the user selection and should make any layer marked as {{{selected}}} both selected in the interface and, if supported, receptive to editing. When loading, it is acceptable to make only a single layer selected (and possibly receptive to editing) if that is all that is supported and multiple layers are marked as {{{selected}}} in the !OpenRaster file being loaded. The choice of which layer to make active is left as an implementation detail, but should be guided by the {{{selected}}} attributes of layers.
 
 The {{{selected}}} attribute must be omitted when saving for the archival intent.
+
+=== Support ===
+
+Implemented in Krita and !MyPaint development trunks since 2012-03-26.
