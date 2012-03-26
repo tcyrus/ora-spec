@@ -4,7 +4,7 @@
 
 ---------------------
 
-State: Proposal<<BR>>
+State: Implemented ([[https://gitorious.org/openraster/openraster-standard/merge_requests/1|awaiting schema merge]])<<BR>>
 Bug: https://bugs.freedesktop.org/show_bug.cgi?id=37714
 
 == Layer Edit Locking Status ==
@@ -33,3 +33,7 @@ This change has no impact on the viewing baseline intent.
 Applications supporting the full baseline intent which permit layers to be made immutable by the user to prevent accidental edits should mark edit-locked layers with the {{{edit-locked}}} attribute when saving, and restore their edit-locked state when loading. Applications may impose their own definition of what ''edit-locked'' actually means; for example, in !MyPaint, layers marked as locked in this way cannot be painted to, but are also unavailable for selection by brushstroke or for brushstroke picking.
 
 The {{{edit-locked}}} attribute must be omitted when saving for the archival intent.
+
+=== Support ===
+
+Implemented in Krita and MyPaint development trunks since 2012-03-26. 
