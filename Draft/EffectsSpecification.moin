@@ -18,27 +18,27 @@ SVG 1.1 already defines a list of filters which will be used as a basis for this
 
 == ColorMatrix ==
 
-See [[http://www.w3.org/TR/SVG11/filters.html#feColorMatrix|SVG 1.1 Specification]].
+See [[http://www.w3.org/TR/SVG11/filters.html#feColorMatrixElement|SVG 1.1 Specification]].
 
 == ConvolveMatrix ==
 
-See [[http://www.w3.org/TR/SVG11/filters.html#feConvolveMatrix|SVG 1.1 Specification]].
+See [[http://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElement|SVG 1.1 Specification]].
 
 == ComponentTransfer ==
 
-See [[http://www.w3.org/TR/SVG11/filters.html#feComponentTransfer|SVG 1.1 Specification]].
+See [[http://www.w3.org/TR/SVG11/filters.html#feComponentTransferElement|SVG 1.1 Specification]].
 
 == GaussianBlur ==
 
-See [[http://www.w3.org/TR/SVG11/filters.html#feGaussianBlur|SVG 1.1 Specification]].
+See [[http://www.w3.org/TR/SVG11/filters.html#feGaussianBlurElement|SVG 1.1 Specification]].
 
 == Tile ==
 
-See [[http://www.w3.org/TR/SVG11/filters.html#feTile|SVG 1.1 Specification]].
+See [[http://www.w3.org/TR/SVG11/filters.html#feTileElement|SVG 1.1 Specification]].
 
 == Morphology ==
 
-See [[http://www.w3.org/TR/SVG11/filters.html#feMorphology|SVG 1.1 Specification]].
+See [[http://www.w3.org/TR/SVG11/filters.html#feMorphologyElement|SVG 1.1 Specification]].
 
 == Distortion correction ==
 
