@@ -6,7 +6,7 @@
 
 = Draft OpenRaster Specification =
 
-== OpenRaster Baseline Intent ==
+== Baseline Intent ==
 
 Every [[../|OpenRaster]] file is compliant to Baseline.
 
@@ -15,29 +15,29 @@ This intent is for exchange between applications and it is allowed to have custo
  * [[/FileLayout|File Layout Specification]] 
  * [[/LayersStack|Layer Stack Specification]]
 
-== OpenRaster Archival Intent ==
+== Archival Intent ==
 
-For this intent is for archival and does not allow any application specific extensions. It places additional restrictions on the Baseline Intent.
+This intent is for long-term archival and does not allow any application specific extensions. It places additional restrictions on the Baseline Intent.
 
  * Still under discussion.
 
-== OpenRaster Extensions / Modules ==
+== Extensions / Modules ==
 
-This describes Optional features like SVG layers, including text layers, that are not part of baseline.
+This describes optional features that are not part of baseline. Extensions should have published working code, and be supported in more than one !OpenRaster-aware application.
 
- * [[/EffectsSpecification|Effects Specification]]
+ * [[/LayerSelectionStatus|Layer Selection Status]] - load and save layer selection state
+ * [[/LayerEditLockingStatus|Layer Edit Locking Status]] - load & save layer immutability state
 
 == Proposals and Application Specific Extensions ==
 
 Those might move to the Extensions after discussion. Application developers are invited to create a wiki entry here and develop it. At some point it might be proposed for inclusion to the Extensions through the Create mailing list.
 
+ * [[/EffectsSpecification|Effects Specification]]
  * [[/Palette|Palette]]
  * [[/EmbedFonts|Embed Fonts]] (Proposal to extension)
  * [[/MultiplePages|Multiple pages]]
  * [[/Animation|Animation]] support using multiple pages and a timer like PSD do
  * [[/UndoHistory|Undo-history]] support undo/history of commands/actions like PSD do
- * [[/LayerSelectionStatus|Layer Selection Status]] - load and save layer selection state
- * [[/LayerEditLockingStatus|Layer Edit Locking Status]] - load & save layer immutability state
 
 == Related Links ==
  * [[http://gitorious.org/openraster/openraster-example-files/trees/master|Sample OpenRaster files]] for testing
