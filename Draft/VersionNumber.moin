@@ -30,4 +30,4 @@ In order to determine which version of the specification a particular !OpenRaste
 </image>
 }}}
 
- * "{{{version}}}": this attribute specifies the version of the !OpenRaster specification to which the document is conformant. Values are [[http://www.w3.org/TR/xmlschema-2/#string|xsd:string]] type, with a particular format and interpretation as defined below. This attribute has a default value of "{{{0.0}}}".
+ * "{{{version}}}": this attribute specifies the version of the !OpenRaster specification to which the document is conformant. Values are [[http://www.w3.org/TR/xmlschema-2/#string|xsd:string]] type, with a particular format and interpretation as defined in the [[#Version number interpretation]] section. This attribute has a default value of "{{{0.0}}}".
