@@ -57,4 +57,4 @@ The thumbnail file must not be referenced in any {{{.xml}}} file.
 
 === mergedimage.png ===
 
-An !OpenRaster file ''may'' contain the final rendered image without any frame or decoration. This file ''must.. be a PNG file with 8 or 16 bits per channel. The {{{mergedimage.png}}} file is obligatory in the Archival Intent.
+An !OpenRaster file ''may'' contain the final rendered image without any frame or decoration. This file ''must'' be a PNG file with 8 or 16 bits per channel. The {{{mergedimage.png}}} file is obligatory in the Archival Intent.
