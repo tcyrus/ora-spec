@@ -76,6 +76,8 @@ The following attributes are optional:
  * "{{{composite-op}}}": the compositing operation used by this layer.
    * Valid values are the following operations as defined by the [[http://dev.w3.org/SVG/modules/compositing/master/SVGCompositing.html#comp-op-property|SVG 1.2 standard]]
      {{{svg:src-over}}} | {{{svg:plus}}} | {{{svg:multiply}}} | {{{svg:screen}}} | {{{svg:overlay}}} | {{{svg:darken}}} | {{{svg:lighten}}} | {{{svg:color-dodge}}} | {{{svg:color-burn}}} | {{{svg:hard-light}}} | {{{svg:soft-light}}} | {{{svg:difference}}}
+   * In addition, the following non-separable compositing operations are defined in the (SVG, Canvas and CSS) [[http://dvcs.w3.org/hg/FXTF/rawfile/tip/compositing/index.html|Compositing and Blending 1.0 Editor's Draft]]:
+     {{{svg:color}}} | {{{svg:luminosity}}} | {{{svg:hue}}} | {{{svg:saturation}}}.
    * Default value: {{{svg:src-over}}}. This is the traditional "normal" or "over" operation used for alpha compositing.
    * In the future other compositing modes might be added, and a way for applications to define new modes will be specified.
  * "opacity" a simple floating-point number, between 0.0 for fully transparent and 1.0 for fully opaque.
