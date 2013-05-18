@@ -1,0 +1,157 @@
+##language: en
+
+''This page has archived [[/Discussion|discussion threads]].''
+
+= Colour file format - Specification Draft =
+
+== Example ==
+
+{{{
+ <colors xmlns:xlink="http://www.w3.org/1999/xlink">
+  <color name="blue">
+     <label lang="en">Blue</label>
+     <label lang="es">Azul</label>
+     <label lang="en_US_SoCal">glassy</label>
+     <CMYK space="2ndFloorCMYK" c="0.8703" m="0.6172" y="0" k="0"/>
+     <Lab space="mine" L="34.67" a="54.1289" b="-103.3359"/>
+     <HSV space="prof01" h="240" s="1" v="1"/>
+     <HLS space="prof02" h="240" l="0.5" s="1"/>
+     <Luv space="prof03" L="34.6701" u="-15.0121" v="-124.7986"/>
+     <XYZ space="prof04" x="0.1566" y="0.0833" z="0.7196"/>
+     <Yxy space="prof05" Y="0.0833" x="0.1632" y="0.0869"/>
+     <Gray space="prof06" g="0.2515"/>
+     <sRGB r="0" g="0" b="1.0"/>
+     <RGB space="lcd" r="0.1608" g="-0.1518" b="1.0753"/>
+  </color><br/>
+  <color name="red">
+     <label lang="en">Red</label>
+     <CMYK space="2ndFloorCMYK" c="0.0011" m="0.7992" y="0.9405" k="0.0038"/>
+     <sRGB r="1.0" g="0" b="0"/>
+  </color><br/>
+  <colorspace name="2ndFloorCMYK" xlink:href="2nd_floor.icm"/>
+  <colorspace name="mine" xlink:href="sample.icm"/>
+  <colorspace name="lcd" xlink:href="generic_lcd.icm"/>
+ </colors>
+}}}
+
+== Colors grouping (a proposal) ==
+
+When have many swatches in one file, some type of groups will be needed. Example:
+
+{{{
+  <group>
+    <label lang='en'>One group</label>
+    <color name='red'>
+       <label lang='en'>Red</label>
+       <sRGB r="1.0" g="0" b="0"/>
+    </color>
+    <group>
+       <label lang='en'>Nested group</label>
+       ...
+    </group>
+  </group>
+  <group>
+  ...
+}}}
+
+--Portnov 16:40, 23 September 2009 (UTC)
+
+== RelaxNG Compact ==
+
+{{{
+ namespace xlink = "http://www.w3.org/1999/xlink"
+ grammar {
+  start = element colors {
+   color+, colorSpace*
+  }
+  color = element color {
+   attribute name { text },
+   label *,
+   (RGB ? & sRGB ? & CMYK ? & Lab ? & HSV ? & HLS ? & Luv ? & XYZ ? & Yxy ? & Gray ? & YCbCr ?)
+  }
+  label = element label {
+   attribute lang { text } ?,
+   text
+  }
+  spaceAttribute = attribute space { text }
+  RGBAttributes =
+   attribute r { xsd:float },
+   attribute g { xsd:float },
+   attribute b { xsd:float }
+  RGB = element RGB {
+   spaceAttribute,
+   RGBAttributes
+  }
+  sRGB = element sRGB {
+   RGBAttributes
+  }
+  CMYK = element CMYK {
+   spaceAttribute,
+   attribute c { xsd:float },
+   attribute m { xsd:float },
+   attribute y { xsd:float },
+   attribute k { xsd:float }
+  }
+  Lab = element Lab {
+   spaceAttribute,
+   attribute L { xsd:float },
+   attribute a { xsd:float },
+   attribute b { xsd:float }
+  }
+  HSV = element HSV {
+   spaceAttribute,
+   attribute h { xsd:float },
+   attribute s { xsd:float },
+   attribute v { xsd:float }
+  }
+  HLS = element HLS {
+   spaceAttribute,
+   attribute h { xsd:float },
+   attribute l { xsd:float },
+   attribute s { xsd:float }
+  }
+  Luv = element Luv {
+   spaceAttribute,
+   attribute L { xsd:float },
+   attribute u { xsd:float },
+   attribute v { xsd:float }
+  }
+  XYZ = element XYZ {
+   spaceAttribute,
+   attribute x { xsd:float },
+   attribute y { xsd:float },
+   attribute z { xsd:float }
+  }
+  Yxy = element Yxy {
+   spaceAttribute,
+   attribute Y { xsd:float },
+   attribute x { xsd:float },
+   attribute y { xsd:float }
+  }
+  YCbCr = element YCbCr {
+   spaceAttribute,
+   attribute Y { xsd:float },
+   attribute Cb { xsd:float },
+   attribute Cr { xsd:float }
+  }
+  Gray = element Gray {
+   spaceAttribute,
+   attribute g { xsd:float }
+  }
+  colorSpace = element colorspace {
+    attribute name { text },
+    attribute xlink:href { xsd:anyURI }
+  }
+ }
+}}}
+
+=== Using for validating  ===
+
+To use the above !RelaxNG schema to validate a swatch you can use:
+
+{{{
+ trang -I rnc -O rng colors.rnc colors.rng
+ xmllint --relaxng colors.rng colors.xml
+}}}
+
+== Description of elements and attributes ==
