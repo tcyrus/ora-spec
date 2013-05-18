@@ -1,0 +1,10 @@
+##language: en
+
+''This is an archived discussion page from the defunct [[http://wayback.archive.org/web/*/http://create.freedesktop.org/|CREATE wiki]], and is not watched by the original authors. For further discussion of the [[../|parent page]] or any other part of the [[Specifications/OpenRaster|OpenRaster specification]], please use the [[http://lists.freedesktop.org/mailman/listinfo/create|mailing list]] instead.''
+
+=== License ===
+
+a exception which explicit allows for static linking would encourage proprietary usage. !KaiUweBehrmann 06:07, 22 January 2010 (UTC)
+  agreed. I am not all that familiar with licenses (beyond GPL and LGPL) ... do you recommend something like BSD license perhaps? --Lukacu 09:54, 22 January 2010 (UTC)
+    Yes a BSD-style license would allow this (BSD is very short, just read it...). --Maxy 21:44, 4 February 2010 (UTC)
+      No problem, I can change the license headers before my next push to the repository --Lukacu 23:57, 4 February 2010 (UTC)
