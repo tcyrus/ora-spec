@@ -1,0 +1,9 @@
+
+_This is an archived discussion page from the defunct [[CREATE wiki|http://wayback.archive.org/web/*/http://create.freedesktop.org/]], and is not watched by the original authors. For further discussion of the [[parent page|Specifications/OpenRaster/Draft/FileLayout]] or any other part of the [[OpenRaster specification|Specifications/OpenRaster]], please use the [[mailing list|http://lists.freedesktop.org/mailman/listinfo/create]] instead._ 
+
+
+## Extension
+
+Proposal: use .odr as extension, to be compliant to other OpenDocument file formats--Efa 16:14, 19 October 2010 (UTC) 
+
+How does this help at all with OpenDocument compliance? Anyhow, the extension is fairly set in stone at this point. --Jonnor 15:46, 23 October 2010 (UTC) 
