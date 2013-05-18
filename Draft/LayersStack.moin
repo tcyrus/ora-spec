@@ -1,0 +1,90 @@
+##language: en
+
+''This page is part of the [[../|Draft OpenRaster specification]].''
+
+----------------------------------------
+
+Note: this is an early draft of the specification, do not take anything on this page for granted. Pretty much everything is open for discussion.
+
+= Introduction =
+
+This document specifies the [[../|OpenRaster]] Layer Stack XML format. The main two goals of the specification are interoperability between applications and allowing files to be saved without destructive pixel operations.
+
+Note that this document does not define how the data is stored, and especially doesn't address the issue of how to store pixels nor how !OpenRaster files can be stored on disk. This document doesn't address the mathematics behind layer compositing operations: it's simpler to describe that using other standard bodies' documents at this stage.
+
+The first part of the document explains the concept of a baseline Layer Stack, with examples. Each attribute and element defined by the baseline profile is explained individually.
+
+== Baseline documents ==
+
+A baseline !OpenRaster document is a document that can be opened and look similar on all applications and platforms. The baseline layer stack format defines the minimum requirement to achieve interoperability and what is unsafe for interoperability. Layer Stack format permits extensions, which should be individually specified in detail, and work safely with the baseline profile.
+
+Some users will require full interoperability, to create files which can be edited on every application supporting !OpenRaster. Other users will only need to view !OpenRaster files. This specification defines two classes of baseline support:
+
+ * "Full baseline", which allows reading and editing
+ * "Viewing baseline" which guarantees visualization of the file, but editing might damage the result
+
+= Syntax =
+
+The formal syntax of the layer stack is given following the [[http://www.relaxng.org|RelaxNG schema]]:
+
+ * https://gitorious.org/openraster/openraster-standard/blobs/master/schema.rnc (compact format, canonical schema)
+ * https://gitorious.org/openraster/openraster-standard/blobs/master/schema.rng (xml format)
+
+= Example =
+
+{{{
+<?xml version='1.0' encoding='UTF-8'?>
+<image w="300" h="177">
+ <stack>
+   <stack x="10">
+     <stack>
+       <layer name="OpenRaster Logo" src="data/hw.svg" x="5" y="5" />
+       <text x="50" y="10">Use a Rich Text XML Specification to write cool text in your OpenRaster File</text>
+     </stack>
+   </stack>
+   <!-- filters are syntactically permissible, but not valid for baseline -->
+   <layer name="layer1" src="data/image1.png" />
+ </stack>
+</image>
+}}}
+
+= Elements and Attributes =
+
+== Common attributes ==
+
+ * "{{{x}}}" and "{{{y}}}": position attributes. These are signed integers with a default value of 0.
+ * "{{{name}}}": The name of the object represented by an element. A Unicode string, encoded in the XML document's own encoding.
+
+== image element ==
+
+This is the root element of the file. The logical size of the image is given by the mandatory "{{{w}}}" and "{{{h}}}" attributes, which are positive integers. The content expressed within {{{image}}} may have extents which are can be smaller or larger, and so the image should be cropped to (0,0,w,h) when displaying, printing, or otherwise exporting to a context which requires a rectangular image.
+
+== stack element ==
+
+This element describes a group of layers. They may contain sub-{{{stack}}}s, {{{layer}}}s, or {{{text}}} elements. The first element in a stack is the uppermost.
+
+== layer element ==
+
+The layer element defines a graphical layer within a layer stack, stored in a separate file within the !OpenRaster file. The following attribute is required:
+
+ * "{{{src}}}": the path to the stored data file for this layer. See the [[../FileLayout|File Layout Specification]] for an explanation of the values which can go here.
+
+Layer elements may have {{{name}}}, {{{x}}} and {{{y}}} attributes, as defined above.
+
+The following attributes are optional:
+
+ * "{{{composite-op}}}": the compositing operation used by this layer.
+   * Valid values are the following operations as defined by the [[http://dev.w3.org/SVG/modules/compositing/master/SVGCompositing.html#comp-op-property|SVG 1.2 standard]]
+     {{{svg:src-over}}} | {{{svg:plus}}} | {{{svg:multiply}}} | {{{svg:screen}}} | {{{svg:overlay}}} | {{{svg:darken}}} | {{{svg:lighten}}} | {{{svg:color-dodge}}} | {{{svg:color-burn}}} | {{{svg:hard-light}}} | {{{svg:soft-light}}} | {{{svg:difference}}}
+   * In addition, the following non-separable compositing operations are defined in the (SVG, Canvas and CSS) [[http://dvcs.w3.org/hg/FXTF/rawfile/tip/compositing/index.html|Compositing and Blending 1.0 Editor's Draft]]:
+     {{{svg:color}}} | {{{svg:luminosity}}} | {{{svg:hue}}} | {{{svg:saturation}}}.
+   * Default value: {{{svg:src-over}}}. This is the traditional "normal" or "over" operation used for alpha compositing.
+   * In the future other compositing modes might be added, and a way for applications to define new modes will be specified.
+ * "opacity" a simple floating-point number, between 0.0 for fully transparent and 1.0 for fully opaque.
+ * "{{{visibility}}}" : The visibility of this layer.
+   * Valid values are either {{{visible}}}, or {{{hidden}}}.
+   * Default value: {{{visible}}}.
+
+== text element ==
+
+TODO: define it! Ideally, use another rich text specification, e.g. a relevant subset of the !OpenDocument Text specification or XHTML.
