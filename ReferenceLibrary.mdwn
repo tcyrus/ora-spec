@@ -1,0 +1,51 @@
+
+_This page is part of the [[OpenRaster file format description|Specifications/OpenRaster]]. It has archived [[discussion threads|Specifications/OpenRaster/ReferenceLibrary/Discussion]]._ 
+
+
+
+---
+
+ 
+
+At the moment this page serves as a brainstorming sandbox for a [[OpenRaster|Specifications/OpenRaster]] reference implementation (from now on referred to as _libora_). Following [[libpng|http://www.libpng.org/]] as an example it should be written in standard C for easy portability, have a low dependency count and a low memory consumption. 
+
+
+## Dependencies
+
+A list of dependencies (the goal is to use only the really essential ones):  
+
+* [[libpng|http://www.libpng.org/]] - for image encoding/compression 
+* [[zlib|http://www.zlib.net/]] - for compression 
+* [[expat|http://expat.sourceforge.net/]] - for XML parsing 
+* [[exempi|http://libopenraw.freedesktop.org/wiki/Exempi]] - XMP metadata handling 
+
+## License
+
+Simplified BSD License 
+
+
+## Development
+
+The development repository of _libora_ is located [[here|http://gitorious.org/openraster/libora]]. To build the code you will need (besides the required libraries) the [[CMake|http://www.cmake.org/]] build system.  
+
+The code was so far tested only on Ubuntu 9.10, so expect some initial problems when porting to other platforms (especially Windows and OSX). 
+
+
+## Progress
+
+* What is done? 
+      * Basic opening and saving of documents 
+      * Nested stack support (Tested only for single stack ... probably some bugs here) 
+      * Layer saving for RGBA/RGB 8/16-bit images (tested only for 8-bit)  
+      * oratool is some kind of demonstration/test ... put ORA file in and it reads it, writes it back (layers) and measures time 
+      * oratool: unpacking layers to multiple files - works for PNGs but disabled at the moment 
+* What will be done 
+      * Thumbnail saving (image provided by the host application) 
+      * oratool: Basic terminal tool for displaying ORA info 
+      * Basic metadata support 
+      * Tiled images saving mechanisms (reduce memory usage for applications that use tiled images) 
+* What would be nice to do 
+      * Custom layer metadata 
+      * Vector layers, text layers 
+      * Filters 
+(Contributors: 12 Jan -- 17 Feb 2010 Lukacu  
