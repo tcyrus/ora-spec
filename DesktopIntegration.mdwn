@@ -1,0 +1,32 @@
+
+_This page is part of the [[OpenRaster file format description|Specifications/OpenRaster]]._ 
+
+
+
+---
+
+ 
+
+
+## File type association
+
+
+### MIME type
+
+For GNU/Linux and similar systems 
+
+* shared-mime-info version > 0.60 will have image/openraster available 
+* Krita (in next released version, which will be the stable 2.1, in the end) uses this version, albeit carrying a local copy of it (to avoid a dependency on a not-released-yet shared-mime-info version) 
+Details: [[http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=545396|http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=545396]] 
+
+
+## File manager preview / Thumbnailer
+[[!table header="no" class="mointable" data="""
+**Platform**  | **Upstream support**  | **Support via ODF compatibility**  | **Standalone support**  | **API documentation** 
+GNOME  | [[N/A|https://bugzilla.gnome.org/show_bug.cgi?id=605577]]  | ooo-thumbnailer?  | [[ora-thumbnailers|Specifications/OpenRaster/ora-thumbnailers]]  | [[Nautilus thumbnail API|http://library.gnome.org/devel/integration-guide/stable/thumbnailer.html.en]] 
+KDE  | [[https://bugs.kde.org/show_bug.cgi?id=220335%20Issue%20filed|https://bugs.kde.org/show_bug.cgi?id=220335%20Issue%20filed]]  | [[patch available|https://bugs.kde.org/show_bug.cgi?id=255755]] for KOffice  | [[ora-thumbnailers|OpenRaster/ora-thumbnailers]]  | [[Kio:ThumbCreator|http://api.kde.org/4.x-api/kdelibs-apidocs/kio/html/classThumbCreator.html]] 
+Xfce <= 4.8  | [[thunar-thumbnailers|http://goodies.xfce.org/projects/thunar-plugins/thunar-thumbnailers]]  | [[http://bugzilla.xfce.org/show_bug.cgi?id=6108%20patch%20available|http://bugzilla.xfce.org/show_bug.cgi?id=6108%20patch%20available]] for thunar-thumbnailers  | [[ora-thumbnailers|OpenRaster/ora-thumbnailers]] |  [[Thunar thumbnail API|http://thunar.xfce.org/documentation/C/customizing-thunar.html]] 
+Xfce >= 4.8 |  Explicit support for image/openraster in [[tumbler's odf-thumbnailer plugin|http://git.xfce.org/xfce/tumbler/tree/plugins]]. Packaged in Debian as "tumbler-plugins-extra". || |  N/A  |  [[https://live.gnome.org/ThumbnailerSpec|https://live.gnome.org/ThumbnailerSpec]] 
+Windows  | N/A  | [[patches welcome|http://lists.freedesktop.org/archives/libreoffice/2010-October/001357.html]] for [[LibreOffice|LibreOffice]]  | [[forum thread with code|http://forum.intilinux.com/mypaint-development-and-suggestions/ora-extension-support]]  | [[IThumbnailProvider/IExtractImage|http://msdn.microsoft.com/en-us/library/cc144118(VS.85).aspx]] 
+Mac OS X  | N/A  | ?  |   | [[QLThumbnailRequest|http://developer.apple.com/library/mac/#documentation/UserExperience/Reference/QLThumbnailRequest_Ref/Reference/reference.html]] 
+"""]]
