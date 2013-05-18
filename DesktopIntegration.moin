@@ -1,0 +1,22 @@
+##language: en
+''This page is part of the [[Specifications/OpenRaster|OpenRaster file format description]].''
+
+----------
+
+== File type association ==
+=== MIME type ===
+For GNU/Linux and similar systems
+
+ * shared-mime-info version > 0.60 will have image/openraster available
+ * Krita (in next released version, which will be the stable 2.1, in the end) uses this version, albeit carrying a local copy of it (to avoid a dependency on a not-released-yet shared-mime-info version)
+
+Details: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=545396
+
+== File manager preview / Thumbnailer ==
+||'''Platform''' ||'''Upstream support''' ||'''Support via ODF compatibility''' ||'''Standalone support''' ||'''API documentation''' ||
+||GNOME ||[[https://bugzilla.gnome.org/show_bug.cgi?id=605577|N/A]] ||ooo-thumbnailer? ||[[Specifications/OpenRaster/ora-thumbnailers|ora-thumbnailers]] ||[[http://library.gnome.org/devel/integration-guide/stable/thumbnailer.html.en|Nautilus thumbnail API]] ||
+||KDE ||https://bugs.kde.org/show_bug.cgi?id=220335%20Issue%20filed ||[[https://bugs.kde.org/show_bug.cgi?id=255755|patch available]] for KOffice ||[[OpenRaster/ora-thumbnailers|ora-thumbnailers]] ||[[http://api.kde.org/4.x-api/kdelibs-apidocs/kio/html/classThumbCreator.html|Kio:ThumbCreator]] ||
+||Xfce <= 4.8 ||[[http://goodies.xfce.org/projects/thunar-plugins/thunar-thumbnailers|thunar-thumbnailers]] ||http://bugzilla.xfce.org/show_bug.cgi?id=6108%20patch%20available for thunar-thumbnailers ||[[OpenRaster/ora-thumbnailers|ora-thumbnailers]]|| [[http://thunar.xfce.org/documentation/C/customizing-thunar.html|Thunar thumbnail API]] ||
+||Xfce >= 4.8|||| Explicit support for image/openraster in [[http://git.xfce.org/xfce/tumbler/tree/plugins|tumbler's odf-thumbnailer plugin]]. Packaged in Debian as "tumbler-plugins-extra". || N/A || https://live.gnome.org/ThumbnailerSpec ||
+||Windows ||N/A ||[[http://lists.freedesktop.org/archives/libreoffice/2010-October/001357.html|patches welcome]] for LibreOffice ||[[http://forum.intilinux.com/mypaint-development-and-suggestions/ora-extension-support|forum thread with code]] ||[[http://msdn.microsoft.com/en-us/library/cc144118(VS.85).aspx|IThumbnailProvider/IExtractImage]] ||
+||Mac OS X ||N/A ||? || ||[[http://developer.apple.com/library/mac/#documentation/UserExperience/Reference/QLThumbnailRequest_Ref/Reference/reference.html|QLThumbnailRequest]] ||
