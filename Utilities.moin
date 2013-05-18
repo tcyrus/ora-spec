@@ -1,0 +1,13 @@
+##language: en
+
+''This page is part of the [[../|OpenRaster file format description]].''
+
+--------------
+
+Stuff that could be useful for end users or developers.
+
+=== Ideas ===
+
+ * File verificator: verify stack.xml schema, data files, thumbnails against the standard
+ * Cli tool for doing simple manipulations like extracting layers, packing back into file, moving/reordering/resizing layers, et.c.
+ * '''''Your idea goes here!'''''
