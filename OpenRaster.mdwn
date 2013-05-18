@@ -1,0 +1,31 @@
+
+
+# OpenRaster
+
+OpenRaster is an open exchange format for layered raster based graphics. The format is inspired by OpenDocument, and aims to reuse as much of related open formats as makes sense. 
+
+OpenRaster was initiated at the Libre Graphics Meeting 2006 in Lyon, when developers from the Gimp and Krita teams, and other potentially interested parties met for the first time. 
+
+Today OpenRaster is supported by several free and open source applications, libraries and tools. 
+
+
+## Resources
+
+* Source code for common components: [[OpenRaster GIT|http://gitorious.org/openraster]] 
+* Mailing list: [[create@freedesktop.org|http://lists.freedesktop.org/mailman/listinfo/create]] 
+* Bug tracker: [[Currently open bugs|https://bugs.freedesktop.org/buglist.cgi?query_format=specific&order=relevance+desc&bug_status=__open__&product=OpenRaster&content=]] | [[File a new bug|https://bugs.freedesktop.org/enter_bug.cgi?product=OpenRaster]] 
+
+## Specifications & Requirements
+
+* [[Draft Specification|Specifications/OpenRaster/Draft]] 
+      * To be worked on in Wiki form and progressed to a formal version. 
+      * Please discuss changes via the mailing list. 
+* [[Requirements and Challenges|Specifications/OpenRaster/Requirements]] 
+* [[Contributing|Specifications/OpenRaster/Contributing]] 
+
+## See Also
+
+* [[Application support|Specifications/OpenRaster/ApplicationSupport]]  
+* [[Desktop integration|Specifications/OpenRaster/DesktopIntegration]] 
+* [[Utilities|Specifications/OpenRaster/Utilities]] 
+* [[Reference library|Specifications/OpenRaster/ReferenceLibrary]]  
