@@ -1,0 +1,53 @@
+
+_This page is part of the [[OpenRaster file format description|Specifications/OpenRaster]]._ 
+
+
+
+---
+
+ 
+
+
+# Draft OpenRaster Specification
+
+
+## Baseline Intent
+
+Every [[OpenRaster|Specifications/OpenRaster]] file is compliant to Baseline. 
+
+This intent is for exchange between applications and it is allowed to have custom extensions in such a file. 
+
+* [[File Layout Specification|Specifications/OpenRaster/Draft/FileLayout]]  
+* [[Layer Stack Specification|Specifications/OpenRaster/Draft/LayersStack]] 
+
+## Archival Intent
+
+This intent is for long-term archival and does not allow any application specific extensions. It places additional restrictions on the Baseline Intent. 
+
+* Still under discussion. 
+
+## Extensions / Modules
+
+This describes optional features that are not part of baseline. Extensions should have published working code, and be supported in more than one OpenRaster-aware application. 
+
+* [[Layer Selection Status|Specifications/OpenRaster/Draft/LayerSelectionStatus]] - load and save layer selection state 
+* [[Layer Edit Locking Status|Specifications/OpenRaster/Draft/LayerEditLockingStatus]] - load & save layer immutability state 
+
+## Proposals and Application Specific Extensions
+
+Those might move to the Extensions after discussion. Application developers are invited to create a wiki entry here and develop it. At some point it might be proposed for inclusion to the Extensions through the Create mailing list. 
+
+* [[Effects Specification|Specifications/OpenRaster/Draft/EffectsSpecification]] 
+* [[Palette|Specifications/OpenRaster/Draft/Palette]] 
+* [[Embed Fonts|Specifications/OpenRaster/Draft/EmbedFonts]] (Proposal to extension) 
+* [[Multiple pages|Specifications/OpenRaster/Draft/MultiplePages]] 
+* [[Animation|Specifications/OpenRaster/Draft/Animation]] support using multiple pages and a timer like PSD do 
+* [[Undo-history|Specifications/OpenRaster/Draft/UndoHistory]] support undo/history of commands/actions like PSD do 
+* [[Version numbering|Specifications/OpenRaster/Draft/VersionNumber]] 
+* [[PNG data requirements|Specifications/OpenRaster/Draft/PngDataRequirements]] 
+
+## Related Links
+
+* [[Sample OpenRaster files|http://gitorious.org/openraster/openraster-example-files/trees/master]] for testing 
+* [[../DesktopIntegration|Specifications/OpenRaster/DesktopIntegration]] for the mime entry, and a list of programs using the thumbnails 
+* [[Thumbnail Managing Standard|http://jens.triq.net/thumbnail-spec/index.html]] 
