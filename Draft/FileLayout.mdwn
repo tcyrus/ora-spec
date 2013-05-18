@@ -1,11 +1,6 @@
-
 _This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]]. It has archived [[discussion threads|Specifications/OpenRaster/Draft/FileLayout/Discussion]]._ 
 
-
-
 ---
-
- 
 
 :_Status: what is already specified is pretty much final_ 
 
@@ -21,18 +16,15 @@ _Technical note: Zip files can use a different compression algorithm on a per-fi
 
 This file format is hereafter referred to as an "OpenRaster file" in this specification. It has a number of required and optional standard files and subdirectories within it: 
 
-
-[[!format txt """
-example.ora  [considered as a folder-like object]
- ├ mimetype
- ├ stack.xml
- ├ data/
- │  ├ [image data files referenced by stack.xml, typically layer*.png]
- │  └ [other data files, indexed elsewhere]
- ├ Thumbnails/
- │  └ thumbnail.png
- └ [mergedimage.png (optional)]
-"""]]
+    example.ora  [considered as a folder-like object]
+     ├ mimetype
+     ├ stack.xml
+     ├ data/
+     │  ├ [image data files referenced by stack.xml, typically layer*.png]
+     │  └ [other data files, indexed elsewhere]
+     ├ Thumbnails/
+     │  └ thumbnail.png
+     └ [mergedimage.png (optional)]
 
 ## Required Files
 

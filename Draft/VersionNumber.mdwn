@@ -1,15 +1,10 @@
-
 _This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]]._ 
-
-
 
 ---
 
- 
-
 State: Proposal   
- Bug: [[https://bugs.freedesktop.org/show_bug.cgi?id=37715|https://bugs.freedesktop.org/show_bug.cgi?id=37715]]   
- Bug: [[https://bugs.freedesktop.org/show_bug.cgi?id=37717|https://bugs.freedesktop.org/show_bug.cgi?id=37717]]   
+ Bug: <https://bugs.freedesktop.org/show_bug.cgi?id=37715>   
+ Bug: <https://bugs.freedesktop.org/show_bug.cgi?id=37717>   
  Affects: [[../LayersStack|Specifications/OpenRaster/Draft/LayersStack]]. 
 
 
@@ -29,10 +24,8 @@ The version number of this initial draft specification is `0.0`. Drafts which su
 
 In order to determine which version of the specification a particular OpenRaster file was created for, applications writing OpenRaster files must store a version code in the root `<image/>` element of the layers stack definition. 
 
+    <image version="0.0" w="640" h="480">
+      <!-- ... -->
+    </image>
 
-[[!format txt """
-<image version="0.0" w="640" h="480">
-  <!-- ... -->
-</image>
-"""]]
 * "`version`": this attribute specifies the version of the OpenRaster specification to which the document is conformant. Values are [[xsd:string|http://www.w3.org/TR/xmlschema-2/#string]] type, with a particular format and interpretation as defined in the [[#Version number interpretation|Specifications/OpenRaster/Draft/VersionNumber]] section. This attribute has a default value of "`0.0`". 

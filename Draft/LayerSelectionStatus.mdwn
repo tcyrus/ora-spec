@@ -1,11 +1,6 @@
-
 _This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]]._ 
 
-
-
 ---
-
- 
 
 State: Implemented ([[awaiting schema merge|https://gitorious.org/openraster/openraster-standard/merge_requests/1]])  
  Bug: [[https://bugs.freedesktop.org/show_bug.cgi?id=37713|https://bugs.freedesktop.org/show_bug.cgi?id=37713]] 
@@ -19,13 +14,10 @@ Editor applications normally have a concept of which layer or layers, are curren
 
 ### Example
 
-
-[[!format txt """
-<stack>
-  <layer name="sketch" x="0" y="0" src="data/layer001.png"/>
-  <layer name="colours" x="-512" y="-128" src="data/layer002.png" selected="true"/>
-</stack>
-"""]]
+    <stack>
+      <layer name="sketch" x="0" y="0" src="data/layer001.png"/>
+      <layer name="colours" x="-512" y="-128" src="data/layer002.png" selected="true"/>
+    </stack>
 
 ### Impact on Applications
 

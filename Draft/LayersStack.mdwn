@@ -1,11 +1,6 @@
-
 _This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]]._ 
 
-
-
 ---
-
- 
 
 Note: this is an early draft of the specification, do not take anything on this page for granted. Pretty much everything is open for discussion. 
 
@@ -32,27 +27,24 @@ Some users will require full interoperability, to create files which can be edit
 
 The formal syntax of the layer stack is given following the [[RelaxNG schema|http://www.relaxng.org]]: 
 
-* [[https://gitorious.org/openraster/openraster-standard/blobs/master/schema.rnc|https://gitorious.org/openraster/openraster-standard/blobs/master/schema.rnc]] (compact format, canonical schema) 
-* [[https://gitorious.org/openraster/openraster-standard/blobs/master/schema.rng|https://gitorious.org/openraster/openraster-standard/blobs/master/schema.rng]] (xml format) 
+* <https://gitorious.org/openraster/openraster-standard/blobs/master/schema.rnc> (compact format, canonical schema) 
+* <https://gitorious.org/openraster/openraster-standard/blobs/master/schema.rng> (xml format) 
 
 # Example
 
-
-[[!format txt """
-<?xml version='1.0' encoding='UTF-8'?>
-<image w="300" h="177">
- <stack>
-   <stack x="10">
+    <?xml version='1.0' encoding='UTF-8'?>
+    <image w="300" h="177">
      <stack>
-       <layer name="OpenRaster Logo" src="data/hw.svg" x="5" y="5" />
-       <text x="50" y="10">Use a Rich Text XML Specification to write cool text in your OpenRaster File</text>
+       <stack x="10">
+         <stack>
+           <layer name="OpenRaster Logo" src="data/hw.svg" x="5" y="5" />
+           <text x="50" y="10">Use a Rich Text XML Specification to write cool text in your OpenRaster File</text>
+         </stack>
+       </stack>
+       <!-- filters are syntactically permissible, but not valid for baseline -->
+       <layer name="layer1" src="data/image1.png" />
      </stack>
-   </stack>
-   <!-- filters are syntactically permissible, but not valid for baseline -->
-   <layer name="layer1" src="data/image1.png" />
- </stack>
-</image>
-"""]]
+    </image>
 
 # Elements and Attributes
 

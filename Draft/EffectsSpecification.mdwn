@@ -1,11 +1,6 @@
-
 _This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]]._ 
 
-
-
 ---
-
- 
 
 Status: Proposed Extension (currently unimplemented?)  
  Note: this is an early draft of the specification, do not take anything on this page for granted, pretty much everything is open for discussion. 
@@ -15,26 +10,23 @@ Status: Proposed Extension (currently unimplemented?)
 
 As a standard extension, outside baseline but defined in the standard schema, OpenRaster layers stacks should be able to contain parameterised filters which themselves might contain sub-stacks. This document shows how the extension would be integrated into baseline OpenRaster `stack.xml` syntax, describes the additional elements and attributes, and lists the available filters. 
 
-
-[[!format txt """
-<stack>
-  <stack>
-    <filter name="invert" type="invert" />
-    <!-- layers -->
-  </stack>
-  <!-- ... layers ... -->
-  <filter name="filter1" type="standard:gaussianblur">
-    <params>
-      <param name="radius">10</param>
-    </params>
     <stack>
-      <layer name="mask2" src="data/mask2.data" composite-op="svg:src-over" />
-      <layer name="mask1" src="data/mask1.png" />
+      <stack>
+        <filter name="invert" type="invert" />
+        <!-- layers -->
+      </stack>
+      <!-- ... layers ... -->
+      <filter name="filter1" type="standard:gaussianblur">
+        <params>
+          <param name="radius">10</param>
+        </params>
+        <stack>
+          <layer name="mask2" src="data/mask2.data" composite-op="svg:src-over" />
+          <layer name="mask1" src="data/mask1.png" />
+        </stack>
+      </filter>
+      <!-- ... more layers ... -->
     </stack>
-  </filter>
-  <!-- ... more layers ... -->
-</stack>
-"""]]
 
 # Semantics
 
@@ -66,29 +58,25 @@ The parameter's value is formed by the content of the `param` element.
 
 For "composite" filters, the params element allows variables to be defined which are then used to parameterise each contained filter. For example, consider a composite function composed of "standard:blur" filter with the parameter "radius" applied with a "standard:invert" filter. It is defined as follows in the composite section: 
 
+    <compositefilter name="blurinvert" >
+      <filter name="blur">
+        <params>
+          <param name="radius">
+            @R@
+          </param>
+        </params>
+      </filter>
+      <filter name="invert" />
+    </compositefilter>
 
-[[!format txt """
-<compositefilter name="blurinvert" >
-  <filter name="blur">
-    <params>
-      <param name="radius">
-        @R@
-      </param>
-    </params>
-  </filter>
-  <filter name="invert" />
-</compositefilter>
-"""]]
 Then the usage would be: 
 
+    <filter name="composite:blurinvert" >
+      <params>
+        <param name="R">10</param>
+      </params>
+    </filter>
 
-[[!format txt """
-<filter name="composite:blurinvert" >
-  <params>
-    <param name="R">10</param>
-  </params>
-</filter>
-"""]]
 TODO: reconsider this, is it useful ? it just come out of my mind that is the only usefull use of parameters for composite filter, but if it's useless, lets not allow any parameters for them ! 
 
 

@@ -1,11 +1,6 @@
-
 _This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]]._ 
 
-
-
 ---
-
- 
 
 State: Implemented ([[awaiting schema merge|https://gitorious.org/openraster/openraster-standard/merge_requests/1]])  
  Bug: [[https://bugs.freedesktop.org/show_bug.cgi?id=37714|https://bugs.freedesktop.org/show_bug.cgi?id=37714]] 
@@ -23,13 +18,10 @@ Editor applications sometimes have a concept of layers which are currently locke
 
 When a user does not wish to accidentally paint colour onto a monochrome sketch layer, they may wish to _edit-lock_ that layer in the user interface. When the working document is saved, such a layer stack might be saved as: 
 
-
-[[!format txt """
-<stack>
-  <layer name="sketch" x="0" y="0" src="data/layer001.png" edit-locked="true"/>
-  <layer name="colours" x="-512" y="-128" src="data/layer002.png"/>
-</stack>
-"""]]
+    <stack>
+      <layer name="sketch" x="0" y="0" src="data/layer001.png" edit-locked="true"/>
+      <layer name="colours" x="-512" y="-128" src="data/layer002.png"/>
+    </stack>
 
 ### Impact on Applications
 
