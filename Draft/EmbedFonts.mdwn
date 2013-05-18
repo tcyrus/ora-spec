@@ -1,0 +1,21 @@
+
+_This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]]._ 
+
+
+
+---
+
+ 
+
+State: Proposal 
+
+
+### Embed fonts as TTF files
+
+To improve the user experience and maximize the representation accuracy is possible to store the .ttf fonts itself into the .ora file. 
+
+Additionally the implementation must check if the font is libre, then: 
+
+* If is libre: Embed it directly into the .ora 
+* If is not libre: Alert the user about the license issues, and offer him to avoid the embeding or to embed it despite of the legal issues. 
+(Contributions: 28-30 May 2010 by Markos) 
