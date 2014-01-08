@@ -12,7 +12,7 @@ _This page is part of the [[Draft OpenRaster specification|Specifications/OpenRa
 
 OpenRaster files have the file name extension **.ora**. The data is stored within a [[Zip file|http://www.pkware.com/documents/casestudies/APPNOTE.TXT]] wrapper. 
 
-_Technical note: Zip files can use a different compression algorithm on a per-file basis. Only DEFLATED and STORED should be used for OpenRaster files. The file names within OpenRaster "zip files" are case-sensitive and must be UTF-8 encoded. If you decide to write non-ascii file names, be aware that the Zip format has an UTF-8 flag for each file name. Make sure this flag is set, otherwise the content might get decoded as cp437. Notw also that the Zip file format has a 64bit extension which must be enabled to write files larger than 4GB._ 
+_Technical note: Zip files can use a different compression algorithm on a per-file basis. Only DEFLATED and STORED should be used for OpenRaster files. The file names within OpenRaster "zip files" are case-sensitive and must be UTF-8 encoded. If you decide to write non-ascii file names, be aware that the Zip format has an UTF-8 flag for each file name. Make sure this flag is set, otherwise the content might get decoded as cp437. Note also that the Zip file format has a 64 bit extension which must be enabled to write files larger than 4GB._ 
 
 This file format is hereafter referred to as an "OpenRaster file" in this specification. It has a number of required and optional standard files and subdirectories within it: 
 
