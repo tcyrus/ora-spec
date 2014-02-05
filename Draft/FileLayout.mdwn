@@ -24,7 +24,7 @@ This file format is hereafter referred to as an "OpenRaster file" in this specif
      │  └ [other data files, indexed elsewhere]
      ├ Thumbnails/
      │  └ thumbnail.png
-     └ [mergedimage.png (optional)]
+     └ mergedimage.png
 
 ## Required Files
 
