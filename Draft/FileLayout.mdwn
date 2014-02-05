@@ -48,7 +48,7 @@ All files inside this directory should be referenced from somewhere. Well known 
 
 ### Thumbnails/thumbnail.png
 
-An OpenRaster file _must_ have a `thumbnail.png` in order to allow file browser software to render the thumbnail effciently. It _must_ be a non-interlaced PNG with 8 bits per channel of at most 256x256 pixels. It _should_ be as big as possible without upscaling or changing the aspect ratio. Any aspect ratio is permitted. It _should not_ contain any frame or decoration. 
+An OpenRaster file _must_ have a `thumbnail.png` in order to allow file browser software to render the thumbnail efficiently. It _must_ be a non-interlaced PNG with 8 bits per channel of at most 256x256 pixels. It _should_ be as big as possible without upscaling or changing the aspect ratio. Any aspect ratio is permitted. It _should not_ contain any frame or decoration. 
 
 The thumbnail file must not be referenced in any `.xml` file. 
 
@@ -58,4 +58,4 @@ The thumbnail file must not be referenced in any `.xml` file.
 
 ### mergedimage.png
 
-An OpenRaster file _may_ contain the final rendered image without any frame or decoration. This file _must_ be a PNG file with 8 or 16 bits per channel. The `mergedimage.png` file is obligatory in the Archival Intent. 
+An OpenRaster file _must_ have a `mergedimage.png` in order to accommodate viewer software. It _must_ contain the final rendered image without any frame or decoration. This file _must_ be a PNG file with 8 or 16 bits per channel. _(Since 0.0.2, this file is mandatory)_
