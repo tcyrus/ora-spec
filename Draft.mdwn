@@ -38,7 +38,6 @@ Those might move to the Extensions after discussion. Application developers are 
 * [[Multiple pages|Specifications/OpenRaster/Draft/MultiplePages]] 
 * [[Animation|Specifications/OpenRaster/Draft/Animation]] support using multiple pages and a timer like PSD do 
 * [[Undo-history|Specifications/OpenRaster/Draft/UndoHistory]] support undo/history of commands/actions like PSD do 
-* [[Version numbering|Specifications/OpenRaster/Draft/VersionNumber]] 
 * [[PNG data requirements|Specifications/OpenRaster/Draft/PngDataRequirements]] 
 
 ## Related Links
