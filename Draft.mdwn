@@ -1,15 +1,10 @@
-
 _This page is part of the [[OpenRaster file format description|Specifications/OpenRaster]]._ 
-
-
 
 ---
 
- 
-
-
 # Draft OpenRaster Specification
 
+**Version 0.0.1**
 
 ## Baseline Intent
 
