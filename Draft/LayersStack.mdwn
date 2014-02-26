@@ -33,7 +33,7 @@ The formal syntax of the layer stack is given following the [[RelaxNG schema|htt
 # Example
 
     <?xml version='1.0' encoding='UTF-8'?>
-    <image version="0.0.1" w="300" h="177">
+    <image version="0.0.3" w="300" h="177" xres="600" yres="600">
      <stack>
        <stack x="10">
          <stack>
@@ -59,6 +59,7 @@ The formal syntax of the layer stack is given following the [[RelaxNG schema|htt
 This is the root element of the file. The logical size of the image is given by the mandatory "`w`" and "`h`" attributes, which are positive integers. The content expressed within `image` may have extents which are can be smaller or larger, and so the image should be cropped to (0,0,w,h) when displaying, printing, or otherwise exporting to a context which requires a rectangular image.
 
 * The mandatory "`version`" attribute specifies the version of the OpenRaster specification to which the OpenRaster file as a whole conforms. Values are [[xsd:string|http://www.w3.org/TR/xmlschema-2/#string]]s which conform to [SemVer 2.0.0](http://semver.org/spec/v2.0.0.html). _(Since: 0.0.1)_
+* The optional `xres` and `yres` attributes specify the nominal resolution of the document as a whole in the horizontal and vertical dimensions, in pixels per inch. Values are [[xsd:int|http://www.w3.org/TR/xmlschema-2/#int]]s with a minimum value of 1. The default value, if unspecified, is 72. If either  is specified, the other must also be specified. Applications should preserve resolution information specified in the document in both directions unless it is adjusted by the user, even if they make the simplifying assumption that xres is equal to yres. _(Since: 0.0.3)_
 
 ## stack element
 
