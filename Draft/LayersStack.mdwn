@@ -1,4 +1,4 @@
-_This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]] at version 0.0.4-pre.1_ 
+_This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]] at version 0.0.4_ 
 
 ---
 
