@@ -4,7 +4,7 @@ _This page is part of the [[OpenRaster file format description|Specifications/Op
 
 # Draft OpenRaster Specification
 
-**Version 0.0.4**
+**Version 0.0.5**
 
 ## Baseline Intent
 
