@@ -1,4 +1,4 @@
-_This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]] at version 0.0.4_ 
+_This page is part of the [[Draft OpenRaster specification|Specifications/OpenRaster/Draft]] at version 0.0.5_ 
 
 ---
 
@@ -183,6 +183,17 @@ The operation to use when rendering this stack or layer over its backdrop. The e
   <td>svg:dst-out</td>
   <td><a href="http://www.w3.org/TR/compositing-1/#blendingnormal">Normal</a></td>
   <td><a href="http://www.w3.org/TR/compositing-1/#porterduffcompositingoperators_dstout">Destination Out</a></td>
+</tr>
+
+<tr>
+  <td>svg:src-atop</td>
+  <td><a href="http://www.w3.org/TR/compositing-1/#blendingnormal">Normal</a></td>
+  <td><a href="http://www.w3.org/TR/compositing-1/#porterduffcompositingoperators_srcatop">Source Atop</a></td>
+</tr>
+<tr>
+  <td>svg:dst-atop</td>
+  <td><a href="http://www.w3.org/TR/compositing-1/#blendingnormal">Normal</a></td>
+  <td><a href="http://www.w3.org/TR/compositing-1/#porterduffcompositingoperators_dstatop">Destination Atop</a></td>
 </tr>
 
 </table>
